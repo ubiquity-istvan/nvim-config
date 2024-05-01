@@ -8,3 +8,7 @@ vim.api.nvim_set_keymap("n", "<Leader>s", ":w<CR>", { noremap = true, silent = t
 vim.api.nvim_set_keymap("i", "<M-CR>", "<C-O>o", { noremap = true, silent = true })
 -- Select all text with Ctrl + a
 vim.api.nvim_set_keymap("n", "<C-a>", "ggVG", { noremap = true })
+-- Copy selected text to system clipboard
+vim.api.nvim_set_keymap("v", "<C-c>", '"+y', { noremap = true })
+-- Paste from system clipboard
+vim.api.nvim_set_keymap("n", "<C-v>", '"+p', { noremap = true })
